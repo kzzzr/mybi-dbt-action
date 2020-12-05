@@ -23,9 +23,9 @@ ENV DBT_PROFILES_DIR=.
 
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
 
-# ADD entrypoint.sh /entrypoint.sh
-# RUN chmod +x /entrypoint.sh
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-COPY entrypoint.sh /entrypoint.sh
+# COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 
