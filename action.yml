@@ -1,4 +1,4 @@
-name: dbt action
+name: dbt mssql action
 description: 'Run dbt command for mybi (mssql database)'
 
 # inputs:
