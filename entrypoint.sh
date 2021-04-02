@@ -1,7 +1,12 @@
 #!/bin/sh -l
 
+# set logging
 set -ex
 
+# cd to project directory which is ./ by default
+cd ${INPUT_PROJECT_DIR:-.} 
+
+# perform actions
 echo "dbt --version" && dbt --version
 echo "dbt debug" && dbt debug
 echo "dbt deps" && dbt deps
