@@ -13,3 +13,4 @@ echo "dbt deps" && dbt deps
 echo "dbt seed" && dbt seed
 echo "dbt run" && dbt run
 echo "dbt test" && dbt test
+echo 'dbt run-operation "clean_up"' && dbt run-operation "clean_up"
