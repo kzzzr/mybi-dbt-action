@@ -1,16 +1,31 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
 # set logging
 set -ex
+
+banner() {
+    echo
+    echo "*** $*  ***"
+}
 
 # cd to project directory which is ./ by default
 cd ${INPUT_PROJECT_DIR:-.} 
 
 # perform actions
-echo "dbt --version" && dbt --version
-echo "dbt debug" && dbt debug
-echo "dbt deps" && dbt deps
-echo "dbt seed" && dbt seed
-echo "dbt run" && dbt run
-echo "dbt test" && dbt test
-echo 'dbt run-operation "clean_up"' && dbt run-operation "clean_up"
+banner "Current dbt version:"
+dbt --version
+
+banner "Check connection:"
+dbt debug
+
+banner "Check connection:"
+dbt seed
+
+banner "Check connection:"
+dbt run
+
+# banner "Install dependencies:"
+# dbt deps
+
+# banner "Build DWH:"
+# dbt build && dbt run-operation "clean_up"
