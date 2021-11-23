@@ -8,6 +8,11 @@ banner() {
     echo "*** $*  ***"
 }
 
+banner() {
+    echo
+    echo "*** $*  ***"
+}
+
 # cd to project directory which is ./ by default
 cd ${INPUT_PROJECT_DIR:-.} 
 
