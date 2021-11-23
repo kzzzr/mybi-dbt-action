@@ -1,5 +1,5 @@
-name: dbt-mssql-action
-description: 'Run dbt command for mybi (mssql database)'
+name: dbt-action
+description: 'Build DWH via dbt on top of myBI data'
 
 # inputs:
 #   who-to-greet:  # id of input
