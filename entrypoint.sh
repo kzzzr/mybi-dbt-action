@@ -21,11 +21,17 @@ dbt debug
 banner "Install dependencies:"
 dbt deps
 
-banner "Check connection:"
-dbt seed
+banner "dbt build:"
+dbt build
 
-banner "Check connection:"
-dbt run
+# banner "dbt seed:"
+# dbt seed
 
-# banner "Build DWH:"
-# dbt build && dbt run-operation "clean_up"
+# banner "dbt run:"
+# dbt run
+
+# banner "dbt test:"
+# dbt test
+
+# banner "clean up:"
+# dbt run-operation "clean_up"
