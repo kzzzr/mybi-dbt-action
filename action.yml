@@ -1,4 +1,4 @@
-name: dbt Action
+name: myBI dbt Action
 author: Artemiy Kozyr @kzzzr
 description: Dockerized Action to run dbt commands
 
